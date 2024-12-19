@@ -1,5 +1,5 @@
 {
-  "name": "community-price-predictor",
+  "name": "nistara",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,25 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.5",
+    "@heroicons/react": "^2.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.3.1",
     "framer-motion": "^11.11.9",
-    "google-auth-library": "^9.14.2",
+    "google-auth-library": "^9.15.0",
     "googleapis": "^144.0.0",
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.454.0",
     "next": "^15.1.1",
+    "react-chartjs-2": "^5.2.0",
     "react-player": "^2.16.0",
     "react-scroll": "^1.9.0",
     "sonner": "^1.7.0",
     "swiper": "^11.1.14",
+    "swr": "^2.2.5",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
