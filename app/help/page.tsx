@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
+import socket from "../socket";
 
 type Location = {
   lat: number;
@@ -10,8 +10,6 @@ type Location = {
   role: "help" | "rescuer";
   deviceId: string;
 };
-
-const socket = io();
 
 export default function HelpPage() {
   const [locations, setLocations] = useState<Location[]>([]);
@@ -22,26 +20,24 @@ export default function HelpPage() {
     localStorage.setItem("deviceId", deviceId);
 
     const fetchLocation = () => {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-            const locationData: Location = { lat: latitude, lng: longitude, role: "help", deviceId };
-            setUserLocation(locationData);
-            socket.emit("updateLocation", locationData); // Send location to server
-          },
-          (error) => {
-            // Log more detailed error info
-            console.error("Error getting location:", error.message, error.code);
-            alert("Error getting location. Please allow location access and try again.");
-          },
-          { enableHighAccuracy: true }
-        );
-      };      
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const locationData: Location = { lat: latitude, lng: longitude, role: "help", deviceId };
+          setUserLocation(locationData);
+          socket.emit("updateLocation", locationData); // Send location to server
+        },
+        (error) => {
+          console.error("Error getting location:", error.message);
+          alert("Error getting location. Please allow location access and try again.");
+        },
+        { enableHighAccuracy: true }
+      );
+    };
 
     fetchLocation();
     const locationInterval = setInterval(fetchLocation, 5000); // Update location every 5 seconds
 
-    // Listen for location updates from others (rescuer)
     socket.on("locationUpdate", (data: Location) => {
       setLocations((prev) => [
         ...prev.filter((loc) => loc.deviceId !== data.deviceId), // Replace old data if same deviceId

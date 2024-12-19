@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
+import socket from "../socket";
 
 type Location = {
   lat: number;
@@ -10,8 +10,6 @@ type Location = {
   role: "help" | "rescuer";
   deviceId: string;
 };
-
-const socket = io();
 
 export default function RescuerPage() {
   const [locations, setLocations] = useState<Location[]>([]);
@@ -21,7 +19,6 @@ export default function RescuerPage() {
     const deviceId = localStorage.getItem("deviceId") || `device-${Date.now()}`;
     localStorage.setItem("deviceId", deviceId);
 
-    // Function to fetch location and send it to the server
     const fetchLocation = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -38,7 +35,6 @@ export default function RescuerPage() {
     fetchLocation();
     const locationInterval = setInterval(fetchLocation, 5000); // Update location every 5 seconds
 
-    // Listen for location updates from others (help seekers)
     socket.on("locationUpdate", (data: Location) => {
       setLocations((prev) => [
         ...prev.filter((loc) => loc.deviceId !== data.deviceId), // Replace old data if same deviceId
