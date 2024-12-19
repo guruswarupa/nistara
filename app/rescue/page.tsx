@@ -53,11 +53,11 @@ const RescuePage = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Rescue Page</h1>
+    <div className="p-4 bg-[#081A2D]">
+      <h1 className="text-2xl font-bold mb-4 mt-20 text-white">Rescue Page</h1>
       <table className="min-w-full table-auto border-collapse border border-gray-300">
         <thead>
-          <tr>
+          <tr className="bg-[#081A2D] text-white">
             <th className="border px-4 py-2">Name</th>
             <th className="border px-4 py-2">GPS Coordinates</th>
             <th className="border px-4 py-2">Zone</th>
@@ -76,7 +76,7 @@ const RescuePage = () => {
             );
 
             return (
-              <tr key={index} className="text-center">
+              <tr key={index} className="text-center bg-[#081A2D] text-white">
                 <td className="border px-4 py-2">{rescuer.name}</td>
                 <td className="border px-4 py-2">
                   {rescuer.lat}, {rescuer.lng}

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const LearnPage: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-start min-h-screen py-12 bg-gradient-to-b from-gray-900 via-black to-gray-800">
+        <div className="pt-20 flex flex-col items-center justify-start min-h-screen py-12 bg-gradient-to-b from-gray-900 via-black to-gray-800">
             <h1 className="text-6xl font-extrabold text-white mb-16 text-center leading-tight">
                 Learn About Disasters
             </h1>
