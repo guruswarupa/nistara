@@ -19,7 +19,7 @@
     "google-auth-library": "^9.14.2",
     "googleapis": "^144.0.0",
     "lucide-react": "^0.454.0",
-    "next": "15.0.1",
+    "next": "^15.1.1",
     "react-player": "^2.16.0",
     "react-scroll": "^1.9.0",
     "sonner": "^1.7.0",

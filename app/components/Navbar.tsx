@@ -15,7 +15,7 @@ const links = [
   { name: "Rescue Operations", position: "left", to: "/rescue" },
   { name: "Predictions", position: "right", to: "/predictions" },
   { name: "Reports", position: "right", to: "/reports" },
-  { name: "Contact Us", position: "right", to: "/contactus" }
+  { name: "Help Assist", position: "right", to: "https://karunavistara.streamlit.app/" },
 ];
 
 const Navbar = () => {

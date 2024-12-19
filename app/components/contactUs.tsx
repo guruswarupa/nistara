@@ -37,7 +37,6 @@ const ContactUs = () => {
       <Toaster /> {/* Toaster for notifications */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-[#1D76D2]">Contact Us</h2>
-        <p className="text-lg text-white mt-2">We&apos;d love to hear from you!</p>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center gap-12">
