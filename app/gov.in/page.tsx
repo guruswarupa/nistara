@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const govPage: React.FC = () => {
+const GovPage: React.FC = () => {
     const [enteredPassword, setEnteredPassword] = useState('');
     const [authorized, setAuthorized] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -45,4 +45,4 @@ const govPage: React.FC = () => {
     );
 };
 
-export default govPage;
+export default GovPage;

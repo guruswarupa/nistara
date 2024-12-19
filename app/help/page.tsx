@@ -74,7 +74,7 @@ export default function HelpPage() {
       )}
 
       <div className="mt-8">
-        <h2 className="text-lg font-semibold">Rescuers' Locations</h2>
+        <h2 className="text-lg font-semibold">Rescuers&apos; Locations</h2>
         {locations
           .filter((loc) => loc.role === "rescuer")
           .map((location) => (
