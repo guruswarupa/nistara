@@ -48,9 +48,9 @@ const Navbar = () => {
       {/* Center Logo */}
       <div className="flex items-center justify-center">
         <motion.img
-          src="/nistara.png"
+          src="/NistAra.png"
           alt="Nistara Logo"
-          className="w-14 h-auto md:w-20"
+          className="w-20 h-auto md:w-20"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
