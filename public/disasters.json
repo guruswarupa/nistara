@@ -1,0 +1,67 @@
+[
+    {
+      "id": "flood",
+      "title": "Floods",
+      "cause": "Floods occur when water exceeds normal levels due to heavy rainfall, dam breaks, melting snow, or blockages in rivers. Flooding can also occur due to high tides or storm surges during tropical cyclones.",
+      "prevention": "To prevent floods, improve drainage systems, avoid construction on floodplains, build effective flood control infrastructure, plant trees and vegetation to reduce soil erosion, and create floodplain zoning laws. Building retention ponds or reservoirs to control water flow can also help mitigate flood risks.",
+      "youtubeLinks": [
+        "https://youtu.be/9hQZCiZ21fk?si=C1pa8D2lN2wNh8RO",
+        "https://youtu.be/g6XLRu-bloc?si=XU4PjVD0wmhsGNnx"
+      ],
+      "areasProne": [
+        "Uttarakhand",
+        "Assam",
+        "West Bengal",
+        "Kerala"
+      ]
+    },
+    {
+      "id": "cyclone",
+      "title": "Cyclone",
+      "cause": "Cyclones are caused by the rapid upward movement of warm air in tropical areas, leading to intense low-pressure systems. The movement of these systems can cause heavy rainfall, strong winds, and storm surges. The ocean's surface temperature also plays a crucial role in cyclogenesis.",
+      "prevention": "Build cyclone-resistant shelters, have early warning systems in place, evacuate in case of an impending cyclone, secure loose objects and windows, strengthen coastal infrastructure to withstand storm surges, and build coastal mangroves to act as natural barriers against storm surges.",
+      "youtubeLinks": [
+        "https://youtu.be/FxF8fPdtGao?si=2eJ4GR-k9_Q2U_aC",
+        "https://youtu.be/W2UDbDXXYGE?si=j5O1N5qthIJqbr7d"
+      ],
+      "areasProne": [
+        "West Bengal",
+        "Odisha",
+        "Andhra Pradesh",
+        "Tamil Nadu"
+      ]
+    },
+    {
+      "id": "earthquake",
+      "title": "Earthquake",
+      "cause": "Earthquakes occur due to tectonic plate movements along fault lines, releasing energy that causes the ground to shake. Human activities such as mining, reservoir-induced seismicity from large dams, and fracking can also induce earthquakes. These seismic waves propagate through the Earth's layers, causing widespread damage.",
+      "prevention": "Build earthquake-resistant structures, have emergency plans in place, ensure regular drills, reinforce critical infrastructure such as bridges and hospitals, and retrofitting old buildings. Establish early warning systems to detect seismic activity and inform the population. Promote land-use policies that avoid construction in high-risk seismic zones.",
+      "youtubeLinks": [
+        "https://youtu.be/dJpIU1rSOFY?si=dcA2BTSC9giF7B8n",
+        "https://youtu.be/17kBVfGjI8c?si=6SoTXdcozbmSP5MX"
+      ],
+      "areasProne": [
+        "Himalayan Region",
+        "Gujarat",
+        "Kashmir",
+        "Rajasthan"
+      ]
+    },
+    {
+      "id": "tsunami",
+      "title": "Tsunami",
+      "cause": "Tsunamis are caused by underwater earthquakes, volcanic eruptions, or landslides that displace large amounts of water. The energy generated from the displacement of the ocean floor creates waves that can travel vast distances across the ocean. When these waves reach shallow coastal areas, their height increases, causing devastating flooding.",
+      "prevention": "Implement early warning systems, construct tsunami-resistant infrastructure, conduct evacuation drills, raise public awareness on tsunami risks, and establish coastal buffers such as mangrove forests and coral reefs to reduce the impact of waves. Designate safe evacuation routes and high ground zones for coastal communities.",
+      "youtubeLinks": [
+        "https://youtu.be/aHljDIDf6js?si=AJl5tj_DeQcmykg2",
+        "https://youtu.be/4Xebwzb3dDE?si=Js8LC8VMomlf1_6C"
+      ],
+      "areasProne": [
+        "Andaman and Nicobar Islands",
+        "Kochi",
+        "Chennai",
+        "Mumbai"
+      ]
+    }
+  ]
+  
