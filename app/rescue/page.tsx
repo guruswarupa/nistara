@@ -1,6 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { usePathname, useRouter } from 'next/navigation';
+import Cookies from 'js-cookie';
+import { motion } from 'framer-motion';
 
 type Rescuer = {
   name: string;
@@ -10,7 +14,10 @@ type Rescuer = {
 };
 
 const RescuePage = () => {
+  const { isAuthenticated, userEmail } = useAuth();
   const [rescuers, setRescuers] = useState<Rescuer[]>([]);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchRescueData = async () => {
@@ -24,6 +31,29 @@ const RescuePage = () => {
 
     return () => clearInterval(interval); 
   }, []);
+  
+  const Loader = () => (
+    <motion.div
+      className="w-full h-screen flex items-center justify-center bg-opacity-50 bg-gray-800"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="border-t-4 border-blue-500 border-solid w-16 h-16 rounded-full animate-spin" />
+    </motion.div>
+  );
+
+  useEffect(() => {
+    const storedAuth = Cookies.get('isAuthenticated');
+    if (storedAuth !== 'true') {
+        Cookies.set('redirectPath', pathname, { expires: 1 });
+        router.push('/login');
+    }
+}, [pathname, router]);
+
+  if (!isAuthenticated) {
+      return <div><Loader /><div>Redirecting to login...</div></div>;
+  }
 
   const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number) => {
     const R = 6371;
