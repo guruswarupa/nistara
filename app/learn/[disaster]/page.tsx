@@ -33,7 +33,7 @@ const DisasterPage = () => {
   if (!disasterData) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-800 py-12">
+    <div className="mt-10 min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-800 py-12">
       <div className="container mx-auto px-8">
         <h1 className="text-4xl font-extrabold text-white mb-8">{disasterData.title}</h1>
 
